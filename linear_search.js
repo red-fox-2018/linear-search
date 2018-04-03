@@ -1,9 +1,27 @@
-'use strict'
+/*jshint esversion:6*/
+
+/*
+1. looping values dari kiri ke kanan
+2. jika target sama dengan values, return index setelah itu
+3. jika tidak bertemu return -1
+
+
+1. buat array kosong
+2. looping values dari kiri ke kanan
+3. jika target sama dengan values[i] maka array kosong tersebut di push dengan index
+4. setelah itu return result
+*/
+'use strict';
 
 // Release 0
 console.log("Linear Search")
 let linearSearch = (target, values) => {
-  //write your code here
+  for(var i = 0 ; i < values.length ; i++){
+    if(target === values[i]){
+      return i;
+    }
+  }
+  return -1;
 }
 
 let random_numbers = [ 6, 29, 18, 2, 72, 19, 18, 10, 37 ];
@@ -16,7 +34,13 @@ console.log(linearSearch(9, random_numbers));
 // Release 1
 console.log("Global Linear Search")
 let globalLinearSearch = (target, values) => {
-  //write your code here
+  var result = [];
+  for(var i = 0 ; i < values.length ; i++){
+    if(target === values[i]){
+      result.push(i);
+    }
+  }
+  return result
 }
 
 let banana_arr = "banana".split("");
