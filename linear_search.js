@@ -1,4 +1,16 @@
 'use strict'
+/*
+- PSEUDOCODE
+1. Linier Search
+  - LOOP from 0 to values length and plus one for every iteration
+  -   IF values[i] equal to target, RETURN index
+  - RETURN -1
+2. Global Linier Search
+  - INITIALIZE result to empty array
+  - LOOP values, and SET two parameter data (value) and index
+  -   IF data equal target, ADD index to result
+  - RETURN result
+*/
 
 // Release 0
 console.log("Linear Search")
